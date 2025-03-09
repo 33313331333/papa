@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te quiero Mucho</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #afe1ff;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #happyPhrase {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz Cumpleaños</h1>
+    <button id="happyButton">presiona Aqui</button>
+    <div id="happyPhrase"></div>
+
+    <script>
+        const phrases = [
+            "Gracias por ser el mejor padre del mundo",
+            "Feliz cumpleaños a mi increible padre",
+            "No es oro ni es plata,es mi padre que brilla en esta mañana",
+            "La ditancia no es rival para que veas mis logros",
+            "Gracias por ser mi héroe y mi modelo a seguir",
+            "Tus consejos y tu amor me han guiado toda la vida y me hacen avanzar",
+            "Eres mi ejemplo a seguir y mi inspiración",
+            "Eres el rey de mi corazon",
+            "Tu amor y tu apoyo incondicional son mi fuerza",
+            "Feliz cumpleaños papá,gracias por apoyarme y darme tu tiempo y tus esfuerzos,por estar ahi a la distancia para apoyarme en mi carrera y darme todo lo que puedes,gracias por ser mi padre,te quiero mucho y cada dia te lo seguire repitiendo,incluso si soy un disco rayado,gracias por tu amor",
+
+        ];
+
+        document.getElementById('happyButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            const phrase = phrases[randomIndex];
+            const colors = [, "#bb33ff", "#ffa333", "#4dde21", "#1326ba"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById('happyPhrase').innerText = phrase;
+            document.getElementById('happyPhrase').style.color = randomColor;
+        });
+    </script>
+</body>
+</html>
